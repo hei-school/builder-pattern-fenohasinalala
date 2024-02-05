@@ -27,7 +27,7 @@ public class CarBuilder implements Builder {
     car.setTripComputer(tripComputer);
   }
 
-  public void setGPS() {
+  public void setGps() {
     car.setGps(true);
   }
 

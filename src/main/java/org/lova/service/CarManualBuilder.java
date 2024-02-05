@@ -23,7 +23,7 @@ public class CarManualBuilder implements Builder {
     manual.setTripComputer(tripComputer);
   }
 
-  public void setGPS() {
+  public void setGps() {
     manual.setGps(true);
   }
 

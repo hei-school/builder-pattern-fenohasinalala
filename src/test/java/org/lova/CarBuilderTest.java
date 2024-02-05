@@ -17,15 +17,14 @@ public class CarBuilderTest {
     TripComputer tripComputer = TRIP_COMP1;
     Boolean gps = true;
 
-    Car expected = new Car(seats, engine, tripComputer, gps);
-
     CarBuilder builder = new CarBuilder();
     builder.setSeats(seats);
     builder.setEngine(engine);
     builder.setTripComputer(tripComputer);
-    builder.setGPS();
+    builder.setGps();
     Car actual = builder.getResult();
 
+    Car expected = new Car(seats, engine, tripComputer, gps);
     assertEquals(expected, actual);
   }
 }

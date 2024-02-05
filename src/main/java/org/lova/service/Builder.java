@@ -11,5 +11,5 @@ public interface Builder {
 
   public void setTripComputer(TripComputer tripComputer);
 
-  public void setGPS();
+  public void setGps();
 }

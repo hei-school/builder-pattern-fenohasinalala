@@ -20,8 +20,12 @@ public class CarManual {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
     CarManual manual = (CarManual) o;
     return Objects.equals(seats, manual.seats)
         && Objects.equals(engine, manual.engine)

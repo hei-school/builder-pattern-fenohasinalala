@@ -12,21 +12,17 @@ import org.lova.service.Director;
 public class Main {
 
   public static void main(String[] args) {
-    // FEATURES
-    int seats = 4;
-    TripComputer tripComputer = TRIP_COMP1;
 
-    Director director = new Director();
     CarBuilder builder = new CarBuilder();
-    CarManualBuilder manualBuilder = new CarManualBuilder();
-
     Car car = builder.getResult();
+    CarManualBuilder manualBuilder = new CarManualBuilder();
     CarManual manual = manualBuilder.getProduct();
 
     System.out.println("CAR WITH EMPTY BUILDER\n");
     System.out.println("Car objet : \n" + car);
     System.out.println(manual.print());
 
+    Director director = new Director();
     director.constructSportsCar(builder);
     director.constructSportsCar(manualBuilder);
 
@@ -35,11 +31,13 @@ public class Main {
     System.out.println(manual.print());
 
     System.out.println("ADDING MORE FEATURES\n");
+    TripComputer tripComputer = TRIP_COMP1;
     builder.setTripComputer(tripComputer);
-    builder.setGPS();
+    builder.setGps();
+    int seats = 4;
     builder.setSeats(seats);
     manualBuilder.setTripComputer(tripComputer);
-    manualBuilder.setGPS();
+    manualBuilder.setGps();
     manualBuilder.setSeats(seats);
     System.out.println("Car object: \n" + car);
     System.out.println(manual.print());

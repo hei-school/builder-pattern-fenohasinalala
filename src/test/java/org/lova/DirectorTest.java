@@ -19,12 +19,12 @@ public class DirectorTest {
     TripComputer tripComputer = null;
     Boolean gps = null;
 
-    Car expected = new Car(seats, engine, tripComputer, gps);
-
     CarBuilder builder = new CarBuilder();
     Director director = new Director();
     director.constructSportsCar(builder);
     Car actual = builder.getResult();
+
+    Car expected = new Car(seats, engine, tripComputer, gps);
     assertEquals(expected, actual);
   }
 
@@ -35,12 +35,12 @@ public class DirectorTest {
     TripComputer tripComputer = null;
     Boolean gps = null;
 
-    CarManual expected = new CarManual(seats, engine, tripComputer, gps);
-
     CarManualBuilder builder = new CarManualBuilder();
     Director director = new Director();
     director.constructSportsCar(builder);
     CarManual actual = builder.getProduct();
+
+    CarManual expected = new CarManual(seats, engine, tripComputer, gps);
     assertEquals(expected, actual);
   }
 }

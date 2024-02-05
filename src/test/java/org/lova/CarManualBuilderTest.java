@@ -17,15 +17,14 @@ public class CarManualBuilderTest {
     TripComputer tripComputer = TRIP_COMP1;
     Boolean gps = true;
 
-    CarManual expected = new CarManual(seats, engine, tripComputer, gps);
-
     CarManualBuilder builder = new CarManualBuilder();
     builder.setSeats(seats);
     builder.setEngine(engine);
     builder.setTripComputer(tripComputer);
-    builder.setGPS();
+    builder.setGps();
     CarManual actual = builder.getProduct();
 
+    CarManual expected = new CarManual(seats, engine, tripComputer, gps);
     assertEquals(expected, actual);
   }
 }
