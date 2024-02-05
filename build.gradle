@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id 'application'
+}
+
+group = 'org.lova'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
+    checkstyle 'com.puppycrawl.tools:checkstyle:10.11.0'
+}
+
+checkstyle {
+    toolVersion = "10.11.0"
+}
+
+
+tasks.withType(Checkstyle) {
+    configFile = file("${rootDir}/google_checks.xml")
+}
+
+
+
+task checkstyle(type: Checkstyle) {
+    dependsOn assemble
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+}
+
+application {
+    mainClassName = 'org.lova.Main'
+}
