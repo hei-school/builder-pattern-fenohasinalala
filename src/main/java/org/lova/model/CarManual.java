@@ -6,6 +6,13 @@ import java.util.Objects;
 import org.lova.model.type.TripComputer;
 
 public class CarManual {
+  public CarManual(int seats, String engine, TripComputer tripComputer, Boolean gps) {
+    setSeats(seats);
+    setTripComputer(tripComputer);
+    setEngine(engine);
+    setGps(gps);
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
