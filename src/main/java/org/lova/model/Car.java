@@ -1,76 +1,83 @@
 package org.lova.model;
 
+import java.util.Objects;
 import org.lova.model.type.TripComputer;
 
-import java.util.Objects;
-
 public class Car {
-    private int seats;
-    private String engine;
-    private TripComputer tripComputer;
-    private Boolean gps;
-    @Override
-    public String toString() {
-        return "Car{" +
-                "Seats=" + seats +
-                ", engine='" + engine + '\'' +
-                ", tripComputer=" + tripComputer +
-                ", gps=" + gps +
-                '}';
-    }
+  private int seats;
+  private String engine;
+  private TripComputer tripComputer;
+  private Boolean gps;
 
-    public Car(int seats, String engine, TripComputer tripComputer, Boolean gps) {
-        this.seats = seats;
-        this.engine = engine;
-        this.tripComputer = tripComputer;
-        this.gps = gps;
-    }
+  @Override
+  public String toString() {
+    return "Car{"
+        + "Seats="
+        + seats
+        + ", engine='"
+        + engine
+        + '\''
+        + ", tripComputer="
+        + tripComputer
+        + ", gps="
+        + gps
+        + '}';
+  }
 
-    public Car(){
-    }
+  public Car(int seats, String engine, TripComputer tripComputer, Boolean gps) {
+    this.seats = seats;
+    this.engine = engine;
+    this.tripComputer = tripComputer;
+    this.gps = gps;
+  }
 
-    public void setSeats(int seats) {
-        this.seats = seats;
-    }
+  public Car() {}
 
-    public void setEngine(String engine) {
-        this.engine = engine;
-    }
+  public void setSeats(int seats) {
+    this.seats = seats;
+  }
 
-    public void setTripComputer(TripComputer tripComputer) {
-        this.tripComputer = tripComputer;
-    }
+  public void setEngine(String engine) {
+    this.engine = engine;
+  }
 
-    public void setGps(Boolean gps) {
-        this.gps = gps;
-    }
+  public void setTripComputer(TripComputer tripComputer) {
+    this.tripComputer = tripComputer;
+  }
 
-    public int getSeats() {
-        return seats;
-    }
+  public void setGps(Boolean gps) {
+    this.gps = gps;
+  }
 
-    public String getEngine() {
-        return engine;
-    }
+  public int getSeats() {
+    return seats;
+  }
 
-    public TripComputer getTripComputer() {
-        return tripComputer;
-    }
+  public String getEngine() {
+    return engine;
+  }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Car car = (Car) o;
-        return seats == car.seats && Objects.equals(engine, car.engine) && Objects.equals(tripComputer, car.tripComputer) && Objects.equals(gps, car.gps);
-    }
+  public TripComputer getTripComputer() {
+    return tripComputer;
+  }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(seats, engine, tripComputer, gps);
-    }
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Car car = (Car) o;
+    return seats == car.seats
+        && Objects.equals(engine, car.engine)
+        && Objects.equals(tripComputer, car.tripComputer)
+        && Objects.equals(gps, car.gps);
+  }
 
-    public Boolean getGps() {
-        return gps;
-    }
+  @Override
+  public int hashCode() {
+    return Objects.hash(seats, engine, tripComputer, gps);
+  }
+
+  public Boolean getGps() {
+    return gps;
+  }
 }

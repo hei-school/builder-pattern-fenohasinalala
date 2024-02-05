@@ -5,28 +5,29 @@ import org.lova.model.type.TripComputer;
 
 public class CarManualBuilder implements Builder {
 
-    private CarManual manual = new CarManual();
-    public void reset() {
-        manual = new CarManual();
-    }
+  private CarManual manual = new CarManual();
 
-    public void setSeats(int number) {
-        manual.setSeats(number);
-    }
+  public void reset() {
+    manual = new CarManual();
+  }
 
-    public void setEngine(String engine) {
-        manual.setEngine(engine);
-    }
+  public void setSeats(int number) {
+    manual.setSeats(number);
+  }
 
-    public void setTripComputer(TripComputer tripComputer) {
-        manual.setTripComputer(tripComputer);
-    }
+  public void setEngine(String engine) {
+    manual.setEngine(engine);
+  }
 
-    public void setGPS() {
-        manual.setGps(true);
-    }
+  public void setTripComputer(TripComputer tripComputer) {
+    manual.setTripComputer(tripComputer);
+  }
 
-    public CarManual getProduct() {
-        return manual;
-    }
+  public void setGPS() {
+    manual.setGps(true);
+  }
+
+  public CarManual getProduct() {
+    return manual;
+  }
 }

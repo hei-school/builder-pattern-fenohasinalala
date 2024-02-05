@@ -5,33 +5,33 @@ import org.lova.model.type.TripComputer;
 
 public class CarBuilder implements Builder {
 
-    private Car car;
+  private Car car;
 
-    public CarBuilder() {
-        reset();
-    }
+  public CarBuilder() {
+    reset();
+  }
 
-    public void reset() {
-        car = new Car();
-    }
+  public void reset() {
+    car = new Car();
+  }
 
-    public void setSeats(int number) {
-        car.setSeats(number);
-    }
+  public void setSeats(int number) {
+    car.setSeats(number);
+  }
 
-    public void setEngine(String engine) {
-        car.setEngine(engine);
-    }
+  public void setEngine(String engine) {
+    car.setEngine(engine);
+  }
 
-    public void setTripComputer(TripComputer tripComputer) {
-        car.setTripComputer(tripComputer);
-    }
+  public void setTripComputer(TripComputer tripComputer) {
+    car.setTripComputer(tripComputer);
+  }
 
-    public void setGPS() {
-        car.setGps(true);
-    }
+  public void setGPS() {
+    car.setGps(true);
+  }
 
-    public Car getResult() {
-        return car;
-    }
+  public Car getResult() {
+    return car;
+  }
 }

@@ -1,5 +1,6 @@
 package org.lova.model.type;
 
 public enum TripComputer {
-    TRIP_COMP1, TRIP_COMP2
+  TRIP_COMP1,
+  TRIP_COMP2
 }
