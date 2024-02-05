@@ -12,13 +12,13 @@ import org.lova.service.Director;
 public class Main {
 
   public static void main(String[] args) {
-    Director director = new Director();
-    CarBuilder builder = new CarBuilder();
-    CarManualBuilder manualBuilder = new CarManualBuilder();
-
     // FEATURES
     int seats = 4;
     TripComputer tripComputer = TRIP_COMP1;
+
+    Director director = new Director();
+    CarBuilder builder = new CarBuilder();
+    CarManualBuilder manualBuilder = new CarManualBuilder();
 
     Car car = builder.getResult();
     CarManual manual = manualBuilder.getProduct();

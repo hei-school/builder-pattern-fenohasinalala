@@ -1,6 +1,11 @@
 package org.lova.model;
 
-import static org.lova.constant.CarManualConstant.*;
+import static org.lova.constant.CarManualConstant.ENGINE_FEATURE;
+import static org.lova.constant.CarManualConstant.GPS_FEATURE;
+import static org.lova.constant.CarManualConstant.INTEGRATED;
+import static org.lova.constant.CarManualConstant.NOT_INTEGRATED;
+import static org.lova.constant.CarManualConstant.SEAT_FEATURE;
+import static org.lova.constant.CarManualConstant.TRIP_COMPUTER_FEATURE;
 
 import java.util.Objects;
 import org.lova.model.type.TripComputer;
